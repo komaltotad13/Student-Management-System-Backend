@@ -3,20 +3,19 @@ package com.project.student_management_system.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "student")
-public class Student {
+@Document(collection = "marks")
+public class Mark {
     @Id
     private String id;
     private String registrationNumber;
-    private String password;
+    private String subject;
     private String gradeName;
-    private int presentCount;
-    private int absentCount;
     private Integer fa1;
     private Integer fa2;
     private Integer finalMark;
 
-    // Getters and Setters
+    // Getters and setters
+
     public String getId() {
         return id;
     }
@@ -33,12 +32,12 @@ public class Student {
         this.registrationNumber = registrationNumber;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getGradeName() {
@@ -47,22 +46,6 @@ public class Student {
 
     public void setGradeName(String gradeName) {
         this.gradeName = gradeName;
-    }
-
-    public int getPresentCount() {
-        return presentCount;
-    }
-
-    public void setPresentCount(int presentCount) {
-        this.presentCount = presentCount;
-    }
-
-    public int getAbsentCount() {
-        return absentCount;
-    }
-
-    public void setAbsentCount(int absentCount) {
-        this.absentCount = absentCount;
     }
 
     public Integer getFa1() {

@@ -80,15 +80,6 @@ public class TeacherController {
         return loggedInTeacherRepository.findAll();
     }
 
-//    @GetMapping("/loggedInTeacherGrade")
-//    public String getLoggedInTeacherGrade(@RequestParam String email) {
-//        Grade grade = gradeRepository.findByClassTeacher(email);
-//        if (grade != null) {
-//            return grade.getName();
-//        }
-//        return null;
-//    }
-
     @GetMapping("/loggedInTeacherGrade")
     public String getLoggedInTeacherGrade(@RequestParam String email) {
         Grade grade = gradeRepository.findByClassTeacher(email);
